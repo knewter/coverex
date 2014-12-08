@@ -6,7 +6,6 @@ defmodule Coverex.Mixfile do
   def project do
     [app: :coverex,
      version: "1.1.0-dev",
-     elixir: "~> 1.0.0",
      package: package,
      name: "Coverex - Coverage Reports for Elixir",
      source_url: "https://github.com/alfert/coverex",
@@ -31,19 +30,19 @@ defmodule Coverex.Mixfile do
   defp deps do
     [
       {:httpoison, "0.4.2"},
-      {:poison, "~> 1.1.0"},
+      {:poison, "~> 1.2.1"},
       {:earmark, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.5", only: :dev},
       {:dialyze, "~> 0.1.2", only: :dev}
-    ] 
+    ]
   end
 
   # Hex Package description
   defp description do
     """
-    Coverex is an Elixir Coverage tool used by mix. It provides tables with overviews of 
+    Coverex is an Elixir Coverage tool used by mix. It provides tables with overviews of
     module and function coverage data, includings links to annotated source code files and
-    supports coveralls.io. 
+    supports coveralls.io.
     """
   end
 
